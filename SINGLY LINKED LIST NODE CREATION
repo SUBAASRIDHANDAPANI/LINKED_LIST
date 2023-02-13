@@ -1,0 +1,19 @@
+# include<stdio.h>
+# include<stdlib.h>
+struct node{
+   int data;
+   struct node * next;
+} ;
+typedef struct node SINGLENODE;
+
+SINGLENODE * create_node(int input){
+    SINGLENODE * newnode=(SINGLENODE*) malloc (sizeof(SINGLENODE));
+    newnode->data=input;
+    newnode->next=NULL;
+    
+}
+int main(){
+    int num;
+    scanf("%d",&num);
+    create_node(num);
+}
